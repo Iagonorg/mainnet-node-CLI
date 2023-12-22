@@ -2,7 +2,7 @@
 Iagon Storage Node CLI is a cross-platform CLI application which allows users to share their storage on the Iagon network to earn extra money.
 
 # Introduction
-Welcome to the installation guide for Iagon Node CLI , a desktop application that empowers users to securely store files with ease. This document provides step-by-step instructions to help you install and set up Iagon Node CLI on your Windows, Linux, or macOS system.
+Welcome to the installation guide for Iagon Node CLI , a Command line application that empowers users to securely store files with ease. This document provides step-by-step instructions to help you install and set up Iagon Node CLI on your Windows, Linux, freeBSD or macOS system.
 
 # Downloading the Installation Package
 Visit https://github.com/Iagonorg/mainnet-node-cli/releases to download the installation package for your operating system.
