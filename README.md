@@ -72,7 +72,7 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases to download the inst
 
 # macOS
 - Download application from this link 
-    - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.0/iag-cli-macos
+    - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-macos
 - Open a terminal window.
 - Navigate to the directory where the installation package is located.
 - Enter the following command to make it executable
