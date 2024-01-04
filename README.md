@@ -10,7 +10,7 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases to download the inst
 # Installation Steps
 # Windows
 - Download application from this link
-  - https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.0/iag-cli-windows.exe
+  - https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-windows.exe
 - Follow the on-screen instructions to complete the installation process.
 - Once the installation is complete, Iagon Node CLI is ready to use.
 
@@ -39,7 +39,7 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases to download the inst
 
 # Linux
 - Download application from this link
-  - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.0/iag-cli-linux
+  - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-linux
 - Open a terminal window.
 - Navigate to the directory where the installation package is located.
 - Enter the following command to make it executable
@@ -107,7 +107,7 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases to download the inst
 
 # For FreeBSD
 - Download application from this link 
-    - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.0/iag-cli-freebsd
+    - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-freebsd
 - Open a terminal window.
 - Navigate to the directory where the installation package is located.
 - Enter the following command to make it executable
@@ -151,4 +151,8 @@ Upon completion of the node CLI application installation, users are required to 
 - Authorization Key Retrieval:
  - Upon successful testing, users will be provided with an authorization key. Copy this key and securely store it for future use.
 
+# Steps to migrate to higher version
+- Install the latest version of Iagon Node from above installation steps.
+- Stop the older version of your Iagon Node CLI.
+- After installation, start the latest version of the node.
 
