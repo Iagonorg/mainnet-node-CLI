@@ -70,6 +70,63 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases/latest to download t
   - Command: ./iag-cli-linux help
 -   Description: Display help for commands.
 
+# Run as SYSTEMD-Service under Linux
+### (Autostart at Boot and continuously check if it is running, if not auto-restart)
+
+- Create a script in the same directly where you downloaded the iag-cli-linux to:  
+```nano /full/path/to/your/iag-cli/iag-cli-node-checker.sh```
+
+- Insert the following code into that file and save it:  
+```
+#!/bin/bash
+while true; do
+    if ! pgrep -f "/full/path/to/your/iag-cli/iag-cli-linux /snapshot/iagon-node-cli/build/commands/startServer.js" > /dev/null; then
+        /full/path/to/your/iag-cli/iag-cli-linux start
+    fi
+    sleep 30
+done
+```
+
+- Make the script executable:  
+```chmod +x /full/path/to/your/iag-cli/iag-cli-node-checker.sh```  
+
+- Create the SYSTEMD-Service script-file:  
+```nano /etc/systemd/system/iag-cli.service```
+
+- Insert the following code into that file and save it:  
+```
+[Unit]
+Description=IAG CLI Service
+After=network.target
+
+[Service]
+Type=simple
+User=<username>
+Group=<usergroup>
+ExecStart=/full/path/to/your/iag-cli/iag-cli-node-checker.sh
+ExecStop=/full/path/to/your/iag-cli/iag-cli-linux stop
+WorkingDirectory=/full/path/to/your/iag-cli/
+
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
+```
+
+⚠️Make sure you replace `<username>` and `<usergroup>` with the Username and Usergroup of the User who should run the iag-cli-linux⚠️
+
+- Reload/Refresh the SYSTEMD Daemon:  
+```sudo systemctl daemon-reload```  
+
+- Enable the IAG-CLI Service:  
+```sudo systemctl enable iag-cli.service```  
+
+- Start the IAG-CLI Service:  
+```sudo systemctl start iag-cli.service```  
+
+- By now your IAGON-Node should run, will automatically start after boot and will restart automatically if it crashes.  
+
 # macOS
 - Download application from this link 
     - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-macos
