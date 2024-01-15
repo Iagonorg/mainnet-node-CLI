@@ -10,7 +10,7 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases/latest to download t
 # Installation Steps
 # Windows
 - Download application from this link
-  - https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-windows.exe
+  - https://github.com/Iagonorg/mainnet-node-CLI/releases/latest/download/iag-cli-windows.exe
 - Follow the on-screen instructions to complete the installation process.
 - Once the installation is complete, Iagon Node CLI is ready to use.
 
@@ -39,7 +39,7 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases/latest to download t
 
 # Linux
 - Download application from this link
-  - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-linux
+  - wget https://github.com/Iagonorg/mainnet-node-CLI/releases/latest/download/iag-cli-linux
 - Open a terminal window.
 - Navigate to the directory where the installation package is located.
 - Enter the following command to make it executable
@@ -129,7 +129,7 @@ WantedBy=multi-user.target
 
 # macOS
 - Download application from this link 
-    - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-macos
+    - wget https://github.com/Iagonorg/mainnet-node-CLI/releases/latest/download/iag-cli-macos
 - Open a terminal window.
 - Navigate to the directory where the installation package is located.
 - Enter the following command to make it executable
@@ -164,7 +164,7 @@ WantedBy=multi-user.target
 
 # For FreeBSD
 - Download application from this link 
-    - wget https://github.com/Iagonorg/mainnet-node-cli/releases/download/v1.0.1/iag-cli-freebsd
+    - wget https://github.com/Iagonorg/mainnet-node-CLI/releases/latest/download/iag-cli-freebsd
 - Open a terminal window.
 - Navigate to the directory where the installation package is located.
 - Enter the following command to make it executable
