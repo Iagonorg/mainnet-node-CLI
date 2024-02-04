@@ -81,6 +81,8 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases/latest to download t
 #!/bin/bash
 while true; do
     if ! pgrep -f "/full/path/to/your/iag-cli/iag-cli-linux /snapshot/iagon-node-cli/build" > /dev/null; then
+	/full/path/to/your/iag-cli/iag-cli-linux stop
+	sleep 3
         /full/path/to/your/iag-cli/iag-cli-linux start
     fi
     sleep 30
