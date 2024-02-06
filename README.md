@@ -84,7 +84,7 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases/latest to download t
 IAG_CLI="/full/path/to/your/iag-cli-linux"
 
 while true; do
-    STATUS_OUTPUT=$($IAG_CLI get:status)
+    STATUS_OUTPUT=$($IAG_CLI get:status 2>&1)
     if echo "$STATUS_OUTPUT" | grep -q "Node is not running"; then
         echo "Node is not running. Attempting to restart..."
         $IAG_CLI stop
