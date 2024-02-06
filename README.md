@@ -79,13 +79,23 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases/latest to download t
 - Insert the following code into that file and save it:  
 ```
 #!/bin/bash
+
+# Define the full path to your iag-cli-linux binary
+IAG_CLI="/full/path/to/your/iag-cli-linux"
+
 while true; do
-    if ! pgrep -f "/full/path/to/your/iag-cli/iag-cli-linux /snapshot/iagon-node-cli/build" > /dev/null; then
-	/full/path/to/your/iag-cli/iag-cli-linux stop
-	sleep 3
-        /full/path/to/your/iag-cli/iag-cli-linux start
+    STATUS_OUTPUT=$($IAG_CLI get:status)
+    if echo "$STATUS_OUTPUT" | grep -q "Node is not running"; then
+        echo "Node is not running. Attempting to restart..."
+        $IAG_CLI stop
+        sleep 5
+        if pgrep -f "$IAG_CLI" > /dev/null; then
+            echo "iag-cli-linux processes are still running. Attempting to kill..."
+            pkill -f "$IAG_CLI"
+        fi
+        $IAG_CLI start
     fi
-    sleep 30
+    sleep 60
 done
 ```
 
