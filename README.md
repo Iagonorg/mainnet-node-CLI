@@ -98,6 +98,7 @@ while true; do
     sleep 60
 done
 ```
+⚠️Make sure you replace `/full/path/to/your` of the `IAG_CLI` variable with the full path to your iag-cli-linux⚠️
 
 - Make the script executable:  
 ```chmod +x /full/path/to/your/iag-cli/iag-cli-node-checker.sh```  
