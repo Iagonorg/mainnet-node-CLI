@@ -88,7 +88,7 @@ while true; do
     if echo "$STATUS_OUTPUT" | grep -q "Node is not running"; then
         echo "Node is not running. Attempting to restart..."
         $IAG_CLI stop
-        sleep 5
+        sleep 10
         if pgrep -f "$IAG_CLI" > /dev/null; then
             echo "iag-cli-linux processes are still running. Attempting to kill..."
             pkill -f "$IAG_CLI"
