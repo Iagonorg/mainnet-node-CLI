@@ -83,6 +83,10 @@ Visit https://github.com/Iagonorg/mainnet-node-cli/releases/latest to download t
 # Define the full path to your iag-cli-linux binary
 IAG_CLI="/full/path/to/your/iag-cli-linux"
 
+$IAG_CLI stop
+sleep 10
+$IAG_CLI start
+
 while true; do
     STATUS_OUTPUT=$($IAG_CLI get:status 2>&1)
     if echo "$STATUS_OUTPUT" | grep -q "Node is not running"; then
