@@ -108,7 +108,7 @@ done
 ```chmod +x /full/path/to/your/iag-cli/iag-cli-node-checker.sh```  
 
 - Create the SYSTEMD-Service script-file:  
-```nano /etc/systemd/system/iag-cli.service```
+```sudo nano /etc/systemd/system/iag-cli.service```
 
 - Insert the following code into that file and save it:  
 ```
